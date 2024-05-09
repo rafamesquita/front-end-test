@@ -57,6 +57,6 @@ Nossos critérios de avaliação se baseiam e 3 grandes áreas, sendo elas:
 
 ---
 
-Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Crie uma [issue](https://github.com/kinvoapp/kinvo-front-end-test/issues) e descreva o que achar necessário.
+Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Entre em contato.
 
 **Sucesso!**
