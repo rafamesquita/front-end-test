@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loovi</title>
+    <link rel="stylesheet" href="home.css">                                                                         <!-- LINK PARA CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">        <!-- ÍCONES --> 
+</head>
+
+<!-- HEADER -->
+<header>
+      <img src=".\assets\kinvopremium.svg" alt="kinvopremium">
+
+      <div class="header">
+        <img src=".\assets\saldobruto.svg" alt="saldobruto">
+        <div>
+          <a class="campo-header">BRUTO</a>
+          <a class="cont-header"><strong>130.521.230,02</strong></a>
+        </div>
+        <img src=".\assets\valoraplicado.svg" alt="valoraplicado">
+        <div>
+          <a class="campo-header">VALOR APLICADO</a>
+          <a class="cont-header"><strong>521.230,02</strong></a>
+        </div>
+        <img src=".\assets\rentabilidade.svg" alt="rentabilidade">
+        <div>
+          <a class="campo-header">RENTABILIDADE</a>
+          <a class="cont-header"><strong>2,34%</strong></a>
+        </div>
+        <img src=".\assets\carteira.svg" alt="carteira">
+        <div>
+          <a class="campo-header">CARTEIRA</a>
+          <a class="cont-header"><strong>MINHA CARTEIRA</strong></a>
+        </div>
+        <img src=".\assets\menu.svg" alt="menu">
+      </div>
+
+</header>
+
+
+<body>
+    <div class="container">
+
+        <!-- SIDE-BAR -->
+        <aside class="side-bar">
+            <div class="item-side-bar">
+                <img src=".\assets\resumo.svg" alt="resumo">
+                <a>Resumo Da Carteira</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar">
+                <img src=".\assets\produtos.svg" alt="produtos">
+                <a>Meus Produtos</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar">
+                <img src=".\assets\proventos.svg" alt="proventos">
+                <a>Meus Proventos</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar" id="pagprincipal" onclick="toggleButtons()">
+                <img src=".\assets\ativos.svg" alt="ativos">
+                <a>Classe de Ativos</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+        
+            <div id="buttonsContainer">
+                <div class="item-expandido-side-bar">
+                    <li>Ação</li>
+                    <i class="fas fa-angle-right dropdown"></i>
+                </div>
+                <div class="item-expandido-side-bar">
+                    <li>Fundo</li>
+                    <i class="fas fa-angle-right dropdown"></i>
+                </div>
+                <div class="item-expandido-side-bar">
+                    <li>Fundo Imobiliário</li>
+                    <i class="fas fa-angle-right dropdown"></i>
+                </div>
+                <div class="item-expandido-side-bar" id="pagprincipal">
+                    <li>Fundo Renda Fixa</li>
+                    <i class="fas fa-angle-right dropdown"></i>
+                </div>
+            </div>
+        
+            <div class="item-side-bar">
+                <img src=".\assets\rentabilidade-sidebar.svg" alt="rentabilidade-sidebar">
+                <a>Rentabilidade Real</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar">
+                <img src=".\assets\projecao.svg" alt="projecao">
+                <a>Projeção da Carteira</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar">
+                <img src=".\assets\risco.svg" alt="risco">
+                <a>Risco x Retorno</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+            <div class="item-side-bar">
+                <img src=".\assets\cobertura.svg" alt="cobertura">
+                <a>Cobertura do FGC</a>
+                <i class="fas fa-angle-right dropdown"></i>
+            </div>
+        </aside>
+
+        <section class="renda">
+
+            <!-- INFO RENDA FIXA -->
+            <p><strong>Renda Fixa</strong></p>
+
+            <div class="container">
+                <div class="box">
+                    <a class="info">BRUTO</a>
+                    <a class="dado"><strong>R$ 207.653,10</strong></a>
+                </div>
+
+                <div class="box">
+                    <a class="info">VALOR APLICADO</a>
+                    <a class="dado"><strong>R$ 170.025,64</strong></a>
+                </div>
+
+                <div class="box">
+                    <a class="info">RESULTADO</a>
+                    <a class="dado"><strong>R$ 37.638,46</strong></a>
+                </div>
+
+                <div class="box">
+                    <a class="info">RENTABILIDADE</a>
+                    <a class="dado"><strong>25,08%</strong></a>
+                </div>
+
+                <div class="box">
+                    <a class="info">CDI</a>
+                    <a class="dado"><strong>23.68%</strong></a>
+                </div>
+
+                <div class="box">
+                    <a class="info">% SOBRE CDI</a>
+                    <a class="dado"><strong>320%</strong></a>
+                </div>
+            </div>
+
+
+            <!-- GRÁFICO -->
+            <div class="grafico">
+                <img src=".\assets\grafico.svg" alt="grafico">
+            </div>
+
+
+            <!-- TABELA -->
+            <div class="table-container">
+                <div class="header-table">
+                    <h1>Minhas Rendas Fixas</h1>
+                    <button class="btn-pesquisar">
+                        <i id="lupa" class="fas fa-search"></i>
+                        <input type="text" id="busca" placeholder="Pesquisar...">
+                    </button>
+                </div>
+                <div class="borda"></div>
+                <table id="tabela">
+                    <thead>
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Título <img src=".\assets\info.svg" alt="info">
+                                    <div class="ordenacao">
+                                        <div class="ordenacao-content">
+                                            <a href="#" onclick="sortTable(0)">Ascendente</a>
+                                            <a href="#" onclick="sortTable(1)">Descendente</a>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th onclick="sortTable(1)">Resultado <img src=".\assets\info.svg" alt="info">
+                                    <div class="ordenacao">
+                                        <div class="ordenacao-content">
+                                            <a href="#" onclick="sortTable(2)">Ascendente</a>
+                                            <a href="#" onclick="sortTable(3)">Descendente</a>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th onclick="sortTable(2)">Vencimento <img src=".\assets\info.svg" alt="info">
+                                    <div class="ordenacao">
+                                        <div class="ordenacao-content">
+                                            <a href="#" onclick="sortTable(4)">Ascendente</a>
+                                            <a href="#" onclick="sortTable(5)">Descendente</a>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tesouro IPCA + com Juros 1</td>
+                            <td>R$ 1003,00</td>
+                            <td>15.05.2024</td>
+                        </tr>
+                        <tr>
+                            <td>Tesouro IPCA + com Juros 2</td>
+                            <td>R$ 1004,00</td>
+                            <td>16.05.2024</td>
+                        </tr>
+                        <tr>
+                            <td>Tesouro IPCA + com Juros 3</td>
+                            <td>R$ 1005,00</td>
+                            <td>17.05.2024</td>
+                        </tr>
+                        <tr>
+                            <td>Tesouro IPCA + com Juros 4</td>
+                            <td>R$ 1006,00</td>
+                            <td>18.05.2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- CARTEIRA -->
+            <div class="container">
+                <div class="graf">
+                    <h1>Divisão de Carteira por Tipos</h1>
+                    <div class="borda"></div>
+                    <img src=".\assets\graf1.png" alt="graf1">
+                    <div class="borda"></div>
+                    <div class="legenda">
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graf">
+                    <h1>Divisão de Carteira por Título</h1>
+                    <div class="borda"></div>
+                    <img src=".\assets\graf1.png" alt="graf1">
+                    <div class="borda"></div>
+                    <div class="legenda">
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                        <div>
+                            <li>Tipo</li>
+                            <li>Tipo</li>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+    </div>
+
+    <script type="text/javascript" src="home.js"></script>              <!-- LINK PARA JS -->
+</body>
